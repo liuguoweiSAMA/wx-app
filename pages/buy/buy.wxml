@@ -1,0 +1,14 @@
+<view wx:for="{{arr}}" wx:key="{{item.id}}" style='border-bottom:1px solid #ccc'>
+
+    <view style='display:flex' class='ma'>
+    <image src='{{item.pic}}' class='car2'/>
+    <view style='display:flex;flex-direction: column;'>
+     <text style='margin:20rpx'>{{item.name}}</text>
+    <text style='margin:20rpx;font-size:30rpx'>X{{item.liang}} </text>
+   
+    </view>
+    
+    </view>
+</view>
+
+

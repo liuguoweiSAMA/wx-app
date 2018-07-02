@@ -1,0 +1,63 @@
+<!--pages/mess/mess.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<image src='{{gooddetail.pic}}'></image>
+{{gooddetail.name}}
+<view style='display:flex;margin-top:30rpx;height:70rpx'>
+<view style='width:20%;color:red;margin-left:30rpx'>￥{{gooddetail.minPrice}}</view>
+<view style='width:30%;font-size:30rpx'>购买{{gooddetail.numberOrders}}</view>
+<view style='width:40%;font-size:30rpx'>共收到{{gooddetail.numberGoodReputation}}此好评</view>
+</view>
+<view style='height:40rpx;background:#eee'></view>
+<view>
+
+商品介绍
+<template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>
+
+<view style='position:fixed;bottom:0;left:0;border-top:1px solid #ccc;width:100%;height:110rpx;'>
+<view style='display:flex;'>
+<view style='font-size:31rpx;margin-left:20rpx;margin-rigth:20rpx;text-align:center' >
+<image src='/image/客服.png' class='di'></image>
+<view open-type="contact" >
+客服</view>
+</view >
+<view style='display:flex;flex-direction: column;font-size:31rpx;margin-left:20rpx;margin-rigth:20rpx;text-align:center' >
+<image src='/image/购物车.png' class='di2'></image>
+购物车
+</view >
+<button id='jifen4'  bindtap='model'>加入购物车</button>
+<button id='jifen5' bindtap='model1'>立即购买</button>
+</view>
+</view>
+
+<view class="modal-mask"  bindtap='close' catchtouchmove="preventTouchMove" wx:if="{{showModal}}">
+</view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+<image src='/image/cuo.png' class='cuo' bindtap='close'></image>
+  <view class="modal-section" style='display:flex'>
+      <image src='{{gooddetail.pic}}' class='photo'></image>
+      <view style='display:flex;flex-direction: column;font-size:25rpx;margin-top:50rpx' >
+    {{gooddetail.name}} 
+    <text  style='display:flex;flex-.direction: column;font-size:25rpx;margin-top:30rpx;color:#dd403e'>￥{{price}}</text>
+</view>
+
+  </view>
+
+
+<view wx:for="{{pro}}" wx:for-item="p" wx:for-index="grade" wx:key="{{p.id}}">
+  <text  style='font-size:27rpx;margin:10rpx'>{{p.name}}</text>
+  <view style='display:flex'>
+    <view class='cator {{item.active==true?"hight":""}}' data-index="{{index}}" data-grade="{{grade}}" wx:for="{{p.childsCurGoods}}" wx:key="{{item.id}}" bindtap='changeCatoy' >{{item.name}} </view>
+    </view>
+</view>
+
+
+<view style='display:flex;margin-top:70rpx'>
+  <text  style='font-size:27rpx;margin:10rpx'>购买数量</text> 
+  <view style='font-size:27rpx;margin-left:350rpx'>
+   <text bindtap='down' style='display:inline-block;width:65rpx;height:60rpx;text-align:center;line-height:50rpx;border:1px solid #ccc'>-</text> <text  style='display:inline-block;width:65rpx;height:60rpx;text-align:center;line-height:50rpx;border:1px solid #ccc' >{{liang}}</text> <text  style='display:inline-block;width:65rpx;height:60rpx;text-align:center;line-height:50rpx;border:1px solid #ccc' bindtap='up'>+</text></view>
+</view> 
+<button style='position: absolute;bottom:0;left:0;width:100%;font-size:34rpx;font-weight: lighter;background:#e74240;color:white;height:100rpx;border-radius:0' bindtap='tijiao' wx:if="{{car}}">加入购物车</button>
+<button style='position: absolute;bottom:0;left:0;width:100%;font-size:34rpx;font-weight: lighter;background:#e74240;color:white;height:100rpx;border-radius:0' bindtap='tijiao' wx:if="{{!car}}">立即购买</button>
+</view>
+

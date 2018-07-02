@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/home",
+    "pages/mess/mess",
+    "pages/me/me",
+    "pages/car/car",
+    "pages/buy/buy"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "盼盼大帅哥",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "red",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "selectedIconPath": "image/4.png",
+        "iconPath": "image/1.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/car/car",
+        "selectedIconPath": "image/5.png",
+        "iconPath": "image/2.png",
+        "text": "日志"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "selectedIconPath": "image/6.png",
+        "iconPath": "image/3.png",
+        "text": "个人中心"
+      }
+    ]
+  }
+}

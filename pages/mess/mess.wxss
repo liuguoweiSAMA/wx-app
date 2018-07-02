@@ -1,0 +1,84 @@
+#jifen4{
+  width:260rpx;
+  line-height:110rpx;
+  border-radius: 0;
+  font-weight: lighter;
+  background: orange;
+  color: white;
+  font-size: 38rpx;
+  height: 110rpx;
+  margin-left: 20rpx;
+}
+#jifen5{
+  width:260rpx;
+  line-height: 110rpx;
+   border-radius: 0;
+   font-weight: lighter;
+   background:#dd403e;
+   color: white;
+     font-size: 38rpx;
+      height: 110rpx;
+       margin-left: 20rpx;
+}
+.di{
+  width: 38rpx;
+  height: 38rpx;
+}
+.di2{
+  width: 48rpx;
+  height: 48rpx;
+}
+/* pages/mess/mess.wxss */
+.show-btn {
+  margin-top: 100rpx;
+  color: #22cc22;
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-dialog {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  height:70%;
+  top: 30%;
+  left: 0;
+  z-index: 9999;
+  background:white;
+}
+.photo{
+  width:130rpx;
+  height:130rpx;
+  padding: 50rpx;
+}
+.cuo{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  right: 30rpx;
+  top: 30rpx;
+}
+.hight{
+  color: orange;
+                                                                                                                      
+}
+.cator{
+  width:140rpx;
+  height:55rpx;
+  border:1px solid #ccc;
+  line-height:55rpx;
+  text-align:center;
+  font-size:24rpx;
+  margin:10rpx
+}

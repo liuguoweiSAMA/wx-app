@@ -1,0 +1,22 @@
+<!--pages/car/car.wxml-->
+<view wx:for="{{list}}" wx:key="{{item.id}}" style='border-bottom:1px solid #ccc'>
+
+    <view style='display:flex' class='ma'>
+    <image src='../../image/垃圾桶.png' class='ima' bindtap='del' id='{{index}}'/>
+ <checkbox style='margin:40rpx 20rpx;' bindtap='up'  id='{{index}}' checked="{{item.bool}}" data-id='3'/>
+    <image src='{{item.pic}}' class='car2'/>
+    <view style='display:flex;flex-direction: column;'>
+     <text style='margin:20rpx'>{{item.name}}</text>
+    <text style='margin:20rpx;font-size:30rpx'>单价{{item.price}} </text>
+    <text style='margin-left:20rpx;font-size:30rpx'> 总价{{item.price*item.liang}}</text>
+    </view>
+    <view style='font-size:27rpx;display:flex;margin:50rpx'>
+   <text bindtap='up' id='{{index}}'  data-id='1' style='display:inline-block;width:65rpx;height:60rpx;text-align:center;line-height:50rpx;border:1px solid #ccc'>-</text> <text  style='display:inline-block;width:65rpx;height:60rpx;text-align:center;line-height:50rpx;border:1px solid #ccc' >{{item.liang}}</text> <text  style='display:inline-block;width:65rpx;height:60rpx;text-align:center;line-height:50rpx;border:1px solid #ccc' id='{{index}}' data-id='2' bindtap='up'>+</text></view>
+    </view>
+</view>
+
+<view style='position:fixed;bottom:0;left:0;height:100rpx;border-top:1px solid #ccc;display:block;width:100%;background:white'>
+<checkbox  checked='{{quan}}' bindtap='quan'/>总价为{{zong}}
+<button style='display:inline-block;height:90rpx;font-size:35rpx;margin-left:40%' bindtap='ti'>总价为</button>
+</view>
+
